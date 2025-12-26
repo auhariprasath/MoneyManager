@@ -4,6 +4,7 @@
 ## 1. Project Structure (What goes where)
 
 
+```
 
 Backend/
 │── pom.xml
@@ -26,6 +27,7 @@ Backend/
 │
 └── resources/
 └── application.properties        (Configuration)
+```
 
 ```
 
