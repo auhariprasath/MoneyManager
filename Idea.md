@@ -10,12 +10,12 @@ A comprehensive budget tracking and financial planning application with income/e
 ## Phase 1: Planning & Setup
 
 ### Step 1: Project Setup
-- Initialize React project using Vite or Create React App
-- Set up Spring Boot project with Maven/Gradle
-- Configure MongoDB connection
-- Set up version control (Git repository)
-- Create project folder structure for frontend and backend
-- Set up environment variables for both frontend and backend
+- Initialize React project using Vite or Create React App ✅
+- Set up Spring Boot project with Maven/Gradle ✅
+- Configure MongoDB connection 
+- Set up version control (Git repository) ✅
+- Create project folder structure for frontend and backend ✅
+- Set up environment variables for both frontend and backend ✅
 
 ### Step 2: Database Design
 - Design MongoDB schema for:
