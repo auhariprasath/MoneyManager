@@ -1,4 +1,4 @@
-````md
+
 # 📘 Chat Summary – Money Manager Profile Form (React)
 
 This document summarizes everything discussed in this chat, step by step.
@@ -21,9 +21,7 @@ This document summarizes everything discussed in this chat, step by step.
 table {
   border-collapse: collapse;
 }
-````
-
----
+```
 
 ## 3️⃣ Using Tables in React
 
@@ -38,11 +36,11 @@ table {
 
 * CSS must be imported into the component unless it’s in `App.css`
 
-```js
-import "../styles/Profile.css";
-```
 
----
+import "../styles/Profile.css";
+
+
+
 
 ## 5️⃣ CSS Import Error Fix
 
