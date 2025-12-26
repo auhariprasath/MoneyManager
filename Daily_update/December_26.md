@@ -1,9 +1,9 @@
-```md
+
 # Spring Boot + MongoDB (Complete Summary)
 
 ## 1. Project Structure (What goes where)
 
-```
+
 
 Backend/
 │── pom.xml
