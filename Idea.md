@@ -19,10 +19,10 @@ A comprehensive budget tracking and financial planning application with income/e
 
 ### Step 2: Database Design
 - Design MongoDB schema for:
-  - Users (profile information, preferences)
-  - Transactions (income/expense entries with categories, date, amount, notes)
-  - Budgets (category-wise budget limits, time period)
-  - Goals (goal name, target amount, deadline, current progress)
+  - Users (profile information, preferences) ✅
+  - Transactions (income/expense entries with categories, date, amount, notes) ✅
+  - Budgets (category-wise budget limits, time period) ✅
+  - Goals (goal name, target amount, deadline, current progress) ✅
   - Investment preferences (risk level, investment type)
   - Struggle points (user-marked financial pain points)
 - Create indexes for frequently queried fields
