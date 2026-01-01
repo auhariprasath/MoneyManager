@@ -6,12 +6,13 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Document(collection = "users")
+@Document(collection = "Users")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class UsersEntity {
     @Id
+    @com.fasterxml.jackson.annotation.JsonProperty("_id")
     private String id;
     private String name;
     private String email;
