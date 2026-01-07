@@ -32,15 +32,13 @@ public class UserServiceImpl implements UserService {
                 .orElse(null);
 
         if (existingUser == null) {
-            // If no user exists, create a new one (Upsert behavior)
             if (updatedUser.getCreatedAt() == null) {
                 updatedUser.setCreatedAt(LocalDate.now().toString());
             }
             updatedUser.setUpdatedAt(LocalDate.now().toString());
             return usersRepository.save(updatedUser);
         }
-
-        // Update existing user fields
+        
         if (updatedUser.getName() != null) existingUser.setName(updatedUser.getName());
         if (updatedUser.getEmail() != null) existingUser.setEmail(updatedUser.getEmail());
         if (updatedUser.getPasswordHash() != null) existingUser.setPasswordHash(updatedUser.getPasswordHash());
