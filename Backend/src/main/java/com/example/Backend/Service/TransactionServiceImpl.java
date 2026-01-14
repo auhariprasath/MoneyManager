@@ -4,6 +4,7 @@ import com.example.Backend.Entity.TransactionEntity;
 import com.example.Backend.Repository.TransactionRepository;
 
 import java.time.LocalDate;
+import java.util.List;
 
 import org.springframework.stereotype.Service;
 
@@ -52,5 +53,18 @@ public class TransactionServiceImpl implements TransactionService {
         existingTransaction.setDate(LocalDate.now().toString());
 
         return transactionRepository.save(existingTransaction);
+    }
+
+    @Override
+    public java.util.List<TransactionEntity> getAllTransactions() {
+        return transactionRepository.findAll();
+    }
+
+    @Override
+    public TransactionEntity createTransaction(TransactionEntity transaction) {
+        if (transaction.getDate() == null) {
+            transaction.setDate(LocalDate.now().toString());
+        }
+        return transactionRepository.save(transaction);
     }
 }
