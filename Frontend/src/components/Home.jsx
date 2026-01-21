@@ -9,7 +9,7 @@ export const Home = () => {
   useEffect(() => {
     const fetchBalance = async () => {
       try {
-        const res = await fetch("http://localhost:8080/transaction/all");
+        const res = await fetch("/transaction/all");
         if (!res.ok) throw new Error("Failed to fetch transactions");
         const data = await res.json();
         const list = Array.isArray(data) ? data : [];
@@ -39,6 +39,7 @@ export const Home = () => {
       <button onClick={() => navigate("/transactions")}>Transactions</button>
       <button onClick={() => navigate("/analytics")}>Analytics</button>
       <button onClick={() => navigate("/budget")}>Budget</button>
+      <button onClick={() => navigate('/login')}>Logout</button>
     </>
   )
 }

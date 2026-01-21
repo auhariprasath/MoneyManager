@@ -10,4 +10,18 @@ export default defineConfig({
       },
     }),
   ],
+  server: {
+    proxy: {
+      '/user': {
+        target: 'http://localhost:8080',
+        changeOrigin: true,
+        rewrite: (path) => path
+      },
+      '/transaction': {
+        target: 'http://localhost:8080',
+        changeOrigin: true,
+        rewrite: (path) => path
+      },
+    },
+  },
 })

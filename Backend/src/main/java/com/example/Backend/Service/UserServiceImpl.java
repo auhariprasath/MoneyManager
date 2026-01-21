@@ -2,10 +2,10 @@ package com.example.Backend.Service;
 
 import com.example.Backend.Entity.UsersEntity;
 import com.example.Backend.Repository.UsersRepository;
-
 import org.springframework.stereotype.Service;
-
 import java.time.LocalDate;
+
+import java.util.Optional;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -47,5 +47,24 @@ public class UserServiceImpl implements UserService {
         existingUser.setUpdatedAt(LocalDate.now().toString());
 
         return usersRepository.save(existingUser);
+    }
+
+    @Override
+    public UsersEntity register(UsersEntity user) {
+        if (usersRepository.findByEmail(user.getEmail()).isPresent()) {
+            throw new RuntimeException("Email already exists");
+        }
+        user.setCreatedAt(LocalDate.now().toString());
+        user.setUpdatedAt(LocalDate.now().toString());
+        return usersRepository.save(user);
+    }
+
+    @Override
+    public UsersEntity login(String email, String password) {
+        Optional<UsersEntity> user = usersRepository.findByEmail(email);
+        if (user.isPresent() && user.get().getPasswordHash().equals(password)) {
+            return user.get();
+        }
+        return null;
     }
 }
