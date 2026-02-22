@@ -1,0 +1,34 @@
+# IDEs and Editors
+.idea/
+.vscode/
+*.swp
+*.swo
+*.iml
+
+# Node / Frontend
+app/node_modules/
+app/dist/
+app/.env
+app/.env.local
+app/.env.development.local
+app/.env.test.local
+app/.env.production.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Maven / Backend
+money-manager/backend/target/
+money-manager/backend/.env
+money-manager/backend/*.log
+money-manager/backend/.factorypath
+.mvn/
+
+# Operating System
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+temp/
