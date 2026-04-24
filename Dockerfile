@@ -2,8 +2,8 @@ FROM eclipse-temurin:17-jdk-alpine AS builder
 
 WORKDIR /app
 
-COPY pom.xml .
-COPY src ./src
+COPY money-manager/backend/pom.xml .
+COPY money-manager/backend/src ./src
 
 RUN apk add --no-cache maven && \
     mvn clean package -DskipTests
