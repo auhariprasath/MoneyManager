@@ -10,7 +10,8 @@ import {
   LogOut,
   Menu,
   User,
-  ChevronRight
+  ChevronRight,
+  Calendar
 } from 'lucide-react';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import {
@@ -41,6 +42,7 @@ const Layout = ({ children }: LayoutProps) => {
   const navigation = [
     { name: 'Dashboard', href: '/dashboard', icon: LayoutDashboard },
     { name: 'Transactions', href: '/transactions', icon: Receipt },
+    { name: 'Calendar', href: '/calendar', icon: Calendar },
     { name: 'Budgets', href: '/budgets', icon: Wallet },
     { name: 'Goals', href: '/goals', icon: Target },
     { name: 'Financial Nexus', href: '/suggestions', icon: Lightbulb },

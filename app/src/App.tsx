@@ -6,6 +6,7 @@ import Login from '@/pages/Login';
 import Register from '@/pages/Register';
 import Dashboard from '@/pages/Dashboard';
 import Transactions from '@/pages/Transactions';
+import CalendarPage from '@/pages/CalendarPage';
 import Budgets from '@/pages/Budgets';
 import Goals from '@/pages/Goals';
 import Suggestions from '@/pages/Suggestions';
@@ -33,6 +34,13 @@ function App() {
             <ProtectedRoute>
               <Layout>
                 <Transactions />
+              </Layout>
+            </ProtectedRoute>
+          } />
+          <Route path="/calendar" element={
+            <ProtectedRoute>
+              <Layout>
+                <CalendarPage />
               </Layout>
             </ProtectedRoute>
           } />
