@@ -95,14 +95,6 @@ const CalendarPage = () => {
     }
   };
 
-  const getTransactionDates = (): Date[] => {
-    const dates: Date[] = [];
-    transactions.forEach(t => {
-      dates.push(new Date(t.transactionDate));
-    });
-    return dates;
-  };
-
   const getMonthTotal = (date: Date, type: 'INCOME' | 'EXPENSE'): number => {
     return getTransactionsForMonth(date)
       .filter(t => t.type === type)
